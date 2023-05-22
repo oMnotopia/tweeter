@@ -1,0 +1,26 @@
+.new-tweet{
+  margin-top: 3rem;
+}
+
+#tweet-text {
+  border: none;
+  border-bottom: 4px solid black;
+  background: transparent;
+  width: 100%;
+  outline: none; 
+  resize: none;
+  height: 50px;
+}
+
+.tweet-stats {
+  display: flex;
+  justify-content: space-between;
+  font-family: "bungee";
+}
+
+#tweet-btn {
+  background-color: #4056A1;
+  border: none;
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
