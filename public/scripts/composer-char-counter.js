@@ -5,7 +5,7 @@ $(document).ready(() => {
     const counter = $(this).next().children("output")[0];
     $(counter).text(140 - textLength);
 
-    if (textLength >= 140) {
+    if (textLength > 140) {
       $(counter).css("color", "#FF0000");
     } else {
       $(counter).css("color", "");
