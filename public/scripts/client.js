@@ -58,6 +58,15 @@ $(document).ready(() => {
     e.preventDefault();
     const data = $(this).serialize().slice(5);
 
+    if (data.length === 0) {
+      alert("Your tweet must contain text!");
+      return;
+    }
+    if (data.length > 140) {
+      alert("Your tweet is too long please make it 140 characters or less!");
+      return;
+    }
+    console.log("Shouldn't see this");
     $.ajax({
       type: "POST",
       url: "/tweets",
