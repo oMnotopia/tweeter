@@ -42,8 +42,7 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = (tweetData) => {
-  const tweet = $(document).ready(() => {
-    const $tweet = $("#old-tweets").append(`
+  const $tweet = $("#old-tweets").append(`
     <article>
       <header>
         <div class="icon-name">
@@ -63,10 +62,27 @@ const createTweetElement = (tweetData) => {
       </footer>
     </article>
     `);
-    return $tweet;
-  });
-  return tweet;
+  return $tweet;
 };
 
-renderTweets(data);
+
+
+$(document).ready(() => {
+  renderTweets(data);
+
+  $("form").on("submit", function(e) {
+    e.preventDefault();
+    const data = $(this).serialize().slice(5);
+
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: {text: data},
+      // success: success,
+      // dataType: dataType
+    });
+  });
+});
+
+
 
