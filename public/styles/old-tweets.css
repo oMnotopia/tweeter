@@ -9,6 +9,7 @@ article:hover {
 article > header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 1.5rem;
 }
 
@@ -37,6 +38,7 @@ footer > p {
 
 .icon-name {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -50,4 +52,12 @@ footer > p {
 
 .old-tweet-text {
   padding-left: 2rem;
+}
+
+#old-tweets {
+  margin: 2rem 0;
+}
+
+#old-tweets > article {
+  margin: 1rem 0;
 }

@@ -20,7 +20,7 @@ const tweetData = {
 
 const createTweetElement = (tweetData) => {
   const tweet = $(document).ready(() => {
-    const $tweet = $(".old-tweets").append(`
+    const $tweet = $("#old-tweets").append(`
     <article>
       <header>
         <div class="icon-name">
@@ -49,4 +49,4 @@ const $tweet = createTweetElement(tweetData);
 
 // Test / driver code (temporary)
 console.log($tweet); // to see what it looks like
-$('.old-tweets').append($tweet);
+$('#old-tweets').append($tweet);
