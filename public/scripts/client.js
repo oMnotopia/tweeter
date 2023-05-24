@@ -53,7 +53,7 @@ $(document).ready(() => {
   
   $("form").on("submit", function(e) {
     e.preventDefault();
-    const data = $(this).serialize().slice(5);
+    const data = $(this).serialize();
     $(".error").slideUp(400, function() {
       const tweetLength = $("#tweet-text")[0].value.length;
       if (tweetLength === 0) {
@@ -69,7 +69,7 @@ $(document).ready(() => {
       $.ajax({
         type: "POST",
         url: "/tweets",
-        data: {text: data},
+        data: data,
         success: function() {
           loadTweets();
         }
