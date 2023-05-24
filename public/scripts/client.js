@@ -13,12 +13,12 @@ $(document).ready(() => {
       // calls createTweetElement for each tweet
       const tweetValue = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#old-tweets').append(tweetValue);
+      $('#old-tweets').prepend(tweetValue);
     }
   };
 
   const createTweetElement = (tweetData) => {
-    const $tweet = `
+    const $tweet = $(`
       <article id="tweet-test">
         <header>
           <div class="icon-name">
@@ -37,7 +37,7 @@ $(document).ready(() => {
           </div>
         </footer>
       </article>
-      `;
+      `);
     return $tweet;
   };
 
@@ -45,7 +45,6 @@ $(document).ready(() => {
     $.ajax({
       url: "/tweets",
       success: function(data) {
-        data = data.sort((a,b) => b.created_at - a.created_at);
         renderTweets(data);
       },
       dataType: "json"
@@ -56,12 +55,13 @@ $(document).ready(() => {
     e.preventDefault();
     const data = $(this).serialize().slice(5);
     $(".error").slideUp(400, function() {
-      if (data.length === 0) {
+      const tweetLength = $("#tweet-text")[0].value.length;
+      if (tweetLength === 0) {
         $(".error").text("Your tweet must contain text!");
         $(".error").slideDown();
         return;
       }
-      if (data.length > 140) {
+      if (tweetLength > 140) {
         $(".error").text("Your tweet is too long please make it 140 characters or less!");
         $(".error").slideDown();
         return;
