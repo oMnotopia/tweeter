@@ -55,22 +55,25 @@ $(document).ready(() => {
   $("form").on("submit", function(e) {
     e.preventDefault();
     const data = $(this).serialize().slice(5);
-
-    if (data.length === 0) {
-      alert("Your tweet must contain text!");
-      return;
-    }
-    if (data.length > 140) {
-      alert("Your tweet is too long please make it 140 characters or less!");
-      return;
-    }
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: {text: data},
-      success: function() {
-        loadTweets();
+    $(".error").slideUp(400, function() {
+      if (data.length === 0) {
+        $(".error").text("Your tweet must contain text!");
+        $(".error").slideDown();
+        return;
       }
+      if (data.length > 140) {
+        $(".error").text("Your tweet is too long please make it 140 characters or less!");
+        $(".error").slideDown();
+        return;
+      }
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: {text: data},
+        success: function() {
+          loadTweets();
+        }
+      });
     });
   });
   loadTweets();
