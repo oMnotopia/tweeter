@@ -43,6 +43,7 @@ const loadTweets = () => {
   $.ajax({
     url: "/tweets",
     success: function(data) {
+      data = data.sort((a,b) => b.created_at - a.created_at);
       renderTweets(data);
     },
     dataType: "json"
@@ -52,8 +53,6 @@ const loadTweets = () => {
 loadTweets();
 
 $(document).ready(() => {
-
-
   $("form").on("submit", function(e) {
     e.preventDefault();
     const data = $(this).serialize().slice(5);
@@ -66,7 +65,6 @@ $(document).ready(() => {
       alert("Your tweet is too long please make it 140 characters or less!");
       return;
     }
-    console.log("Shouldn't see this");
     $.ajax({
       type: "POST",
       url: "/tweets",
