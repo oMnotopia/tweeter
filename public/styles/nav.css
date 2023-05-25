@@ -6,11 +6,11 @@ nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  padding: 0 2em;
 }
 
 nav > span {
   font-family: "bungee", "sans-serif";
-  margin-left: 1.5em;
   height: 100%;
   display: flex;
   align-items:center;
@@ -21,7 +21,6 @@ nav > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 1.5em;
 }
 
 nav > div > p {
