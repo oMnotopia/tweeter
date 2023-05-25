@@ -26,8 +26,11 @@ body > header {
   }
 
   .container {
-    width: 50%;
-    margin: 200px 50px 0 50px;
+    width: 55%;
+    margin: 200px 0 0 50px;
+    position: absolute;
+    right: 50px;
+    z-index: -1;
   }
 
   body > header {
@@ -35,6 +38,7 @@ body > header {
     height: 400px;
     margin-top: 200px;
     margin-left: 50px;
+    position: fixed;
   }
 
   body > main {
