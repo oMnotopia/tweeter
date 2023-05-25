@@ -20,11 +20,10 @@ body > header {
 }
 
 @media (min-width: 1024px) {
-  body { 
+  body {
     display: flex;
     justify-content: space-between;
   }
-
   .container {
     width: 55%;
     margin: 200px 0 0 50px;
@@ -32,7 +31,6 @@ body > header {
     right: 50px;
     z-index: -1;
   }
-
   body > header {
     width: 30%;
     height: 400px;
@@ -40,13 +38,10 @@ body > header {
     margin-left: 50px;
     position: fixed;
   }
-
   body > main {
     margin-top: 200px;
   }
-
   section.new-tweet {
     margin-top: 0;
   }
 }
-

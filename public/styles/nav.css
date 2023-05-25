@@ -8,25 +8,20 @@ nav {
   position: fixed;
   padding: 0 2em;
 }
-
-nav > span {
+nav span {
   font-family: "bungee", "sans-serif";
-  height: 100%;
   display: flex;
-  align-items:center;
-}
-
-nav > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-
-nav > div > p {
+nav div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+nav div p {
   margin: 0;
 }
-
-nav > div > span {
-  color: red;
+nav div span {
+  color: #FF0000;
 }

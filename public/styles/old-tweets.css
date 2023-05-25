@@ -33,7 +33,7 @@ footer > p {
 }
 
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
-  color: rgb(255, 225, 0)
+  color: rgb(255, 225, 0);
 }
 
 .icon-name {
@@ -46,8 +46,8 @@ footer > p {
   margin: 0;
 }
 
-.username { 
-  color: lightgray
+.username {
+  color: lightgray;
 }
 
 .old-tweet-text {
