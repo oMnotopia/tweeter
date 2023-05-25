@@ -19,3 +19,30 @@ body > header {
   margin: 0;
 }
 
+@media (min-width: 1024px) {
+  body { 
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 50%;
+    margin: 200px 50px 0 50px;
+  }
+
+  body > header {
+    width: 30%;
+    height: 400px;
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+
+  body > main {
+    margin-top: 200px;
+  }
+
+  section.new-tweet {
+    margin-top: 0;
+  }
+}
+
