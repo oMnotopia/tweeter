@@ -58,14 +58,13 @@ $(document).ready(() => {
     const data = $(this).serialize();
     $(".error").slideUp(400, function() {
       const tweetLength = $("#tweet-text")[0].value.length;
+      $(this).empty();
       if (tweetLength === 0) {
-        $(".error").text("Your tweet must contain text!");
-        $(".error").slideDown();
+        $(this).append("<i class='fa-solid fa-triangle-exclamation'></i>Your tweet must contain text!<i class='fa-solid fa-triangle-exclamation'></i>").slideDown();
         return;
       }
       if (tweetLength > 140) {
-        $(".error").text("Your tweet is too long please make it 140 characters or less!");
-        $(".error").slideDown();
+        $(this).append("<i class='fa-solid fa-triangle-exclamation'></i>Your tweet is too long please make it 140 characters or less!<i class='fa-solid fa-triangle-exclamation'></i>").slideDown();
         return;
       }
       $.ajax({
