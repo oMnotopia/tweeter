@@ -73,6 +73,7 @@ $(document).ready(() => {
         url: "/tweets",
         data: data,
         success: function() {
+          $("#tweet-text").val("");
           loadTweets();
         },
         error: function(err) {
