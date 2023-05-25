@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.bounce:hover {
+.bounce {
   animation-name: bounce;
   animation-timing-function: ease;
 }
