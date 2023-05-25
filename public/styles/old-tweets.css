@@ -63,3 +63,27 @@ footer > p {
 #old-tweets > article {
   margin: 1rem 0;
 }
+
+.toggle-scroll {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.toggle-scroll:hover {
+  cursor: pointer;
+}
+
+.toggle-scroll-arrows {
+  padding-top: 13px;
+  padding-left: 15px;
+  color: #FFFFFF;
+}
+
+.hidden {
+  display: none;
+}
