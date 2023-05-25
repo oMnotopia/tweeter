@@ -1,0 +1,31 @@
+@import "variables";
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: $nav-bg-colour;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0 2em;
+
+  span {
+    font-family: $font-stack;
+    @include verticalAlign;
+  }
+
+  div {
+    @include verticalAlign;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      color: $arrow-colour;
+    }
+  }
+}

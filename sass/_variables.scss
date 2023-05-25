@@ -1,0 +1,11 @@
+$font-stack: "bungee", "sans-serif";
+$nav-bg-colour: #4056A1;;
+$arrow-colour: #FF0000;
+$error-colour: #FF0000;
+$bg-colour: #F4F1EC;
+$body-colour: #545149;
+
+@mixin verticalAlign() {
+  display: flex;
+  align-items: center;
+}

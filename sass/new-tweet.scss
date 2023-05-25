@@ -1,0 +1,56 @@
+@import "variables";
+
+.new-tweet{
+  margin-top: 3rem;
+}
+
+#tweet-text {
+  border: none;
+  border-bottom: 4px solid black;
+  background: transparent;
+  width: 100%;
+  outline: none; 
+  resize: none;
+  height: 50px;
+}
+
+.form-toggle {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.form-toggle:hover {
+  cursor: pointer;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(-5px); }
+100% { transform: translateY(0); }
+}
+
+.tweet-stats {
+  display: flex;
+  justify-content: space-between;
+  font-family: "bungee";
+}
+
+#tweet-btn {
+  background-color: $nav-bg-colour;
+  border: none;
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
+
+.error {
+  color: $error-colour;
+  font-weight: bold;
+  text-shadow: 1px 1px $error-colour;
+  margin: 0;
+  display: none;
+}      
