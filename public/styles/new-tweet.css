@@ -12,6 +12,26 @@
   height: 50px;
 }
 
+.form-toggle {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.form-toggle:hover {
+  cursor: pointer;
+}
+
+.bounce:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(-5px); }
+100% { transform: translateY(0); }
+}
+
 .tweet-stats {
   display: flex;
   justify-content: space-between;
