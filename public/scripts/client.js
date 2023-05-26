@@ -9,6 +9,11 @@ const renderTweets = function(tweets) {
     const tweetValue = createTweetElement(tweet);
     $('#old-tweets').prepend(tweetValue);
   }
+
+  $(".like").on("click", function() {
+    $(".like").toggleClass("like");
+  });
+
 };
 
 //Generates HTML for individual tweets that will be displayed on webpage.
@@ -16,7 +21,7 @@ const renderTweets = function(tweets) {
 //Return ($tweet) -> Generated HTML for displaying tweet.
 const createTweetElement = (tweetData) => {
   const $tweet = $(`
-    <article id="tweet-test">
+    <article>
       <header>
         <div class="icon-name">
           <img src="${tweetData.user.avatars}" alt="avatar">
