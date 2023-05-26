@@ -28,9 +28,9 @@ const createTweetElement = (tweetData) => {
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>
         <div class="social-tags">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-flag report"></i>
+          <i class="fa-solid fa-retweet retweet"></i>
+          <i class="fa-solid fa-heart like"></i>
         </div>
       </footer>
     </article>
