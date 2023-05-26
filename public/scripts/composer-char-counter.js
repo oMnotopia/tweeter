@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 //Counts number of characters entered in textarea.
 //If number is greater than 140 turn counter red, otherwise default colour.
 const textAreaCharCounter = function(e) {

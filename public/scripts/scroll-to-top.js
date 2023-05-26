@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 //If user clicks scroll button returns user to top of screen and focuses text area.
 const scrollToTop = () => {
   $(document).scrollTop(0);

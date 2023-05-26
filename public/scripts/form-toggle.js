@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 $(document).ready(() => {
   $(".form-toggle").on("click", () => {
     $("form").slideToggle("400", "linear", () => {

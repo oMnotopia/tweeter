@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 //Loops through "tweets" array adding each tweet to the HTML section old-tweets.
 //Parameter (tweets) -> Array of objects containing data on tweets.
 const renderTweets = function(tweets) {
@@ -9,11 +8,6 @@ const renderTweets = function(tweets) {
     const tweetValue = createTweetElement(tweet);
     $('#old-tweets').prepend(tweetValue);
   }
-
-  $(".like").on("click", function() {
-    $(".like").toggleClass("like");
-  });
-
 };
 
 //Generates HTML for individual tweets that will be displayed on webpage.
