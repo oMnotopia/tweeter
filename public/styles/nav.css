@@ -25,3 +25,7 @@ nav div p {
 nav div span {
   color: #FF0000;
 }
+nav .company span {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
